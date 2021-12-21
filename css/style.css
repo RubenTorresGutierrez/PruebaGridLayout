@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* Rubén Torres */
+
+/*** IMPORTACIONES ***/
+@import url('fuentes.css');
+
+/*** ASIGNACIONES GLOBALES ***/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Arial';
+}
+
+body{
+    font-size: 16px;
+}
+
+/* ELEMENTOS */
+#logo {grid-area: logo;}
+header {grid-area: header;}
+nav {grid-area: nav;}
+aside {grid-area: aside;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+#contenedor{
+    background-color: #2196F3;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: 
+    'logo header header header'
+    'nav nav nav nav'
+    'aside main main main'
+    'aside footer footer footer';
+    grid-gap: 10px;
+}
+
+#contenedor > *{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
